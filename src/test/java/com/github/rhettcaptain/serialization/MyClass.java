@@ -14,6 +14,7 @@ public class MyClass {
     private boolean hasMoney;
     private MySubClass subClass;
     private ZonedDateTime zonedDateTime;
+    private Integer lovers;
 }
 @Data
 class MySubClass {
