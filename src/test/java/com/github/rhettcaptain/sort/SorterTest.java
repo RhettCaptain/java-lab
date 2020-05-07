@@ -18,15 +18,25 @@ public class SorterTest {
         sorterTest(new ShellSorter<>());
     }
 
+    @Test
+    public void HeapSortTest(){
+        sorterTest(new HeapSorter<>());
+    }
+
+    @Test
+    public void MergeSortTest(){
+        sorterTest(new MergeSorter<>());
+    }
+
     private void sorterTest(Sorter<Integer> sorter){
         List<Integer> intList = new ArrayList<>();
         Random random = new Random();
-        for(int i=0;i<1000;i++){
+        for(int i=0;i<1001;i++){
             intList.add(random.nextInt());
         }
         sorter.sort(intList);
-        for(int i=0; i<999; i++){
-            Assert.assertTrue(intList.get(i) < intList.get(i+1));
+        for(int i=0; i<1000; i++){
+            Assert.assertTrue(intList.get(i) <= intList.get(i+1));
         }
     }
 }

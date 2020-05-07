@@ -35,10 +35,9 @@ public class BinMinHeap<E extends Comparable> implements MinHeap<E> {
         }
         final E min = nodeList.get(1);
         E last = nodeList.remove(nodeList.size()-1);
-        if(nodeList.size() == 2){
+        if(nodeList.size() == 1){
             return min;
         }
-
         nodeList.set(1,last);
         int hole = 1;
         while(hole * 2 < nodeList.size()){
