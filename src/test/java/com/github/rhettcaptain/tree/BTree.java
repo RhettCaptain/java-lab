@@ -24,14 +24,15 @@ public class BTree<E extends Comparable> implements TreeNode<E> {
     }
 
     @Override public TreeNode<E> insert(E item, TreeNode<E> node) {
-        BTree<E> bNode = (BTree<E>)node;
-        if(bNode == null){
-            bNode = new BTree<>(item);
-            return bNode;
-        }
-        for(int i=0;i<bNode.getN();i++){
-            if()
-        }
+//        BTree<E> bNode = (BTree<E>)node;
+//        if(bNode == null){
+//            bNode = new BTree<>(item);
+//            return bNode;
+//        }
+//        for(int i=0;i<bNode.getN();i++){
+//            if()
+//        }
+        return null;
     }
 
     @Override public TreeNode<E> delete(E item, TreeNode<E> node) {
